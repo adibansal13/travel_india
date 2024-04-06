@@ -135,6 +135,7 @@ a {
   gap: 1.2rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-block: 2rem;
 }
 .site-img {
   width: 100%;
