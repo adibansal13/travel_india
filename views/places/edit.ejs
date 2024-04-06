@@ -23,7 +23,7 @@
         <div class="mb-3">
           <label for="description" class="form-label">Description</label>
           <textarea name="Place[description]" class="form-control" required>
-<%= place.description %></textarea
+            <%= place.description %></textarea
           >
           <div class="invalid-feedback">Please give the description</div>
         </div>
@@ -36,6 +36,26 @@
             class="form-control"
           />
           <div class="invalid-feedback">Please upload image</div>
+        </div>
+        <div class="mb-3">
+          <label for="state" class="form-label">State</label>
+          <input
+            type="text"
+            value="<%= place.state %>"
+            class="form-control"
+            name="Place[state]"
+          />
+          <div class="invalid-feedback">Please choose a title</div>
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            value="<%= place.location %>"
+            class="form-control"
+            name="Place[location]"
+          />
+          <div class="invalid-feedback">Please choose a title</div>
         </div>
         <button class="btn btn-primary">EDIT</button>
       </form>

@@ -8,7 +8,7 @@
       <div class="card-image">
         <img src="<%= place.image.url %>" class="card-img" alt="" />
       </div>
-      <div class="show-body p-4" style="width: 50%">
+      <div class="show-body p-4">
         <div class="">
           <h2 class="card-title mb-2"><%= place.name %></h2>
           <p class="card-text"><%= place.description %></p>
@@ -38,9 +38,9 @@
     <h1 class="home-text mt-md-5 mb-2">Visit Sites in <%= place.name %></h1>
     <% } %>
 
-    <div class="show-sites offset-md-1 gap-4 row row-cols-lg-4 mb-5">
+    <div class="show-sites">
       <% for(let site of place.sites){ %>
-      <div class="site-card col-4 m-2">
+      <div class="site-card col-4">
         <img
           class="site-img"
           src="<%= site.siteurl %>"
@@ -66,7 +66,7 @@
     <h1 class="home-text mb-2">Adventures in <%= place.name %></h1>
     <% } %>
 
-    <div class="show-sites offset-md-1 gap-4 row row-cols-lg-4 mb-5">
+    <div class="show-sites">
       <% for(let adv of place.adventures){ %>
       <div class="site-card col-4">
         <img
@@ -118,7 +118,7 @@
           required
         />
       </div>
-      <button class="btn btn-primary">ADD PLACE</button>
+      <button class="btn btn-primary">ADD SITE</button>
     </form>
   </div>
 
@@ -149,7 +149,7 @@
           required
         />
       </div>
-      <button class="btn btn-primary">ADD PLACE</button>
+      <button class="btn btn-primary">ADD ADVENTURE</button>
     </form>
   </div>
   <script src="/js/show.js"></script>

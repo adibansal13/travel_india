@@ -98,6 +98,9 @@ a {
   margin-top: 4rem;
   width: 80%;
 }
+.show-body {
+  width: 50%;
+}
 
 .cont {
   background-color: black;
@@ -127,22 +130,25 @@ a {
 .advform {
   display: none;
 }
-
+.show-sites {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .site-img {
   width: 100%;
   object-fit: cover !important;
   border-radius: 10%;
   transition: 0.4s;
   cursor: pointer;
+  height: 10rem;
 }
 .site-card {
-  position: relative;
   width: 20%;
-  height: 100%;
 }
 .site-text {
   padding-top: 1rem;
-  height: 50%;
   text-align: center;
   font-family: "Satisfy", cursive;
 }
@@ -163,6 +169,9 @@ a {
     display: block;
     width: 100%;
   }
+  .show-body {
+    width: 100%;
+  }
   .card-image {
     width: 100%;
   }
@@ -173,7 +182,7 @@ a {
     left: 10%;
   }
   .site-card {
-    width: 40%;
+    width: 45%;
   }
   .usercss {
     padding: 1.5rem;
