@@ -1,0 +1,20 @@
+<% layout("./layouts/boilerplate") %>
+
+<div class="usercss offset-4 col-4">
+  <h1>Sign In</h1>
+  <form method="post" action="/signin">
+    <div class="mb-3">
+      <label for="username" class="form-label"> Username</label>
+      <input type="text" id="username" class="form-control" name="username" />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="text" id="email" class="form-control" name="email" />
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="text" id="password" class="form-control" name="password" />
+    </div>
+    <button class="btn btn-primary">SIGN IN</button>
+  </form>
+</div>

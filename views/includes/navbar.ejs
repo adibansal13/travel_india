@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg bg-primary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand navbar-text" href="/places">Travel India</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link navlink" aria-current="page" href="/places">Home</a>
+        <% if(currUser){ %> <% if(currUser.username === "admin"){ %>
+
+        <a class="nav-link navlink" href="/places/new">Add New Place</a>
+        <% } %> <% } %>
+      </div>
+    </div>
+    <% if(!currUser){ %>
+    <a href="/signin" class="btn btn-outline-light ms-2"> Sign In </a>
+    <a href="/login" class="btn btn-light ms-2 text-primary"> Login In </a>
+    <% } %> <% if(currUser){ %>
+    <a href="/logout" class="btn btn-light ms-2">Log Out</a>
+    <% } %>
+  </div>
+</nav>

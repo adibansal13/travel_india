@@ -1,0 +1,36 @@
+<% layout("./layouts/boilerplate") %>  
+<body>
+  <img class="mb-5" id="mainimg" src="/images/6_image.avif" alt="" />
+
+  <h2 class="home-text">All Places</h2>
+  <div class="row mb-5 row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <% for( i=0; i<places.length;i++){ %>
+    <a href="/places/<%= places[i]._id %>">
+      <div class="card home-card col" style="width: 20rem">
+        <img
+          class="card-img card-imge"
+          src="<%= places[i].image.url %>"
+          style="height: 15rem"
+        />
+        <h5 class="home-card-title"><%= places[i].name %></h5>
+      </div>
+    </a>
+    <% } %>
+  </div>
+
+  <script>
+    let images = [
+      "1_image.jpg",
+      "2_image.jpg",
+      "3_image.jpeg",
+      "4_image.jpg",
+      "5_image.avif",
+      "6_image.avif",
+    ];
+    let image = document.querySelector("#mainimg");
+    setInterval(() => {
+      let random = Math.floor(Math.random() * 6);
+      image.src = `/images/${images[random]}`;
+    }, 4000);
+  </script>
+</body>

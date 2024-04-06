@@ -1,0 +1,44 @@
+<% layout("./layouts/boilerplate") %>
+<body>
+  <div class="row mt-3">
+    <div class="col-6 offset-3">
+      <h1>Create a New Place</h1>
+      <form
+        method="post"
+        action="/places/<%= place._id %>?_method=PUT"
+        class="needs-validation"
+        novalidate
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="name" class="form-label">Place Name</label>
+          <input
+            type="text"
+            value="<%= place.name %>"
+            class="form-control"
+            name="Place[name]"
+          />
+          <div class="invalid-feedback">Please choose a title</div>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea name="Place[description]" class="form-control" required>
+<%= place.description %></textarea
+          >
+          <div class="invalid-feedback">Please give the description</div>
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Image</label>
+          <input
+            type="file"
+            name="Place[image]"
+            value="<%= place.image.url %>"
+            class="form-control"
+          />
+          <div class="invalid-feedback">Please upload image</div>
+        </div>
+        <button class="btn btn-primary">EDIT</button>
+      </form>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,152 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 5rem;
+  background-color: rgb(244, 250, 255);
+}
+a {
+  text-decoration: none;
+}
+.container {
+  flex: 1;
+}
+
+/* NAVBAR */
+
+.navbar {
+  padding: 0 0 0 10px;
+  box-shadow: 0 1.5px 4px black;
+  animation-name: nav;
+  animation-duration: 2s;
+}
+.usercss {
+  background-color: aliceblue;
+  padding: 3rem;
+  border-radius: 20px;
+  height: 70%;
+  box-shadow: 0 0 5px rgb(48, 144, 227);
+}
+
+@keyframes nav {
+  0% {
+    translate: 0px -60px;
+  }
+  100% {
+    translate: 0px;
+  }
+}
+
+.navbar-text {
+  font-family: "Satisfy", cursive;
+  font-size: 1.8rem;
+  color: white;
+}
+.navlink {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* HOME PAGE */
+
+.home-text {
+  margin-bottom: 2rem;
+  font-family: "Satisfy", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+}
+#mainimg {
+  height: 30rem;
+  width: 100%;
+  border-radius: 2rem;
+}
+.home-card {
+  border: none;
+  background-color: transparent;
+  border-radius: 1rem;
+  margin: 1rem 2rem;
+}
+.home-card-title {
+  font-size: 1.8rem;
+
+  color: rgb(0, 0, 0);
+}
+.card-img {
+  transition: 0.4s;
+  object-fit: cover !important;
+  border-radius: 1rem;
+}
+.card-imge:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 10px;
+}
+.card a {
+  display: block;
+}
+
+/* SHOW PAGE */
+
+.show {
+  filter: blur(0px);
+}
+.show-card {
+  display: flex;
+  margin-top: 4rem;
+}
+
+.show-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cont {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+}
+.formcss {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 30%;
+  left: 25%;
+  background-color: aliceblue;
+}
+.fa-x {
+  position: absolute;
+  right: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.siteform {
+  display: none;
+}
+.advform {
+  display: none;
+}
+
+.site-img {
+  width: 100%;
+  object-fit: cover !important;
+  border-radius: 10%;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.site-card {
+  position: relative;
+  width: 20%;
+  height: 100%;
+}
+.site-text {
+  padding-top: 1rem;
+  height: 50%;
+  text-align: center;
+  font-family: "Satisfy", cursive;
+}
+.site-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0px 10px rgb(71, 71, 71);
+}

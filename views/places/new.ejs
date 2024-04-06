@@ -1,0 +1,71 @@
+<% layout("./layouts/boilerplate") %>
+<body>
+  <div class="row mb-5">
+    <div class="col-6 offset-3">
+      <h1>Create a New Place</h1>
+      <form
+        method="post"
+        action="/places"
+        class="needs-validation"
+        novalidate
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="name" class="form-label">Place Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="Place[name]"
+            placeholder="Enter place name"
+            required
+          />
+          <div class="invalid-feedback">Please choose a title</div>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            name="Place[description]"
+            class="form-control"
+            placeholder="Enter some description"
+            required
+          ></textarea>
+          <div class="invalid-feedback">Please give the description</div>
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload Image</label>
+          <input
+            type="file"
+            name="Place[image]"
+            class="form-control"
+            placeholder="Upload image"
+            required
+          />
+          <div class="invalid-feedback">Please select image</div>
+        </div>
+        <div class="mb-3">
+          <label for="state" class="form-label">State</label>
+          <input
+            type="text"
+            name="Place[state]"
+            class="form-control"
+            placeholder="Enter the state"
+            required
+          />
+          <div class="invalid-feedback">Plaese enter state</div>
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label">Loaction</label>
+          <input
+            type="text"
+            name="Place[location]"
+            class="form-control"
+            placeholder="Enter some location"
+            required
+          />
+          <div class="invalid-feedback">Plaese enter location</div>
+        </div>
+        <button type="submit" class="btn btn-primary">ADD PLACE</button>
+      </form>
+    </div>
+  </div>
+</body>
