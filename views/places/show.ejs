@@ -4,8 +4,8 @@
 
 <body>
   <div class="show">
-    <div class="show-card d-flex offset-1" style="width: 80%">
-      <div class="card-image" style="width: 50%">
+    <div class="show-card offset-md-1">
+      <div class="card-image">
         <img src="<%= place.image.url %>" class="card-img" alt="" />
       </div>
       <div class="show-body p-4" style="width: 50%">
@@ -35,14 +35,12 @@
     <!-- SITES -->
 
     <% if(place.sites.length > 0){ %>
-    <h1 class="home-text mt-5">Visit Sites in <%= place.name %></h1>
+    <h1 class="home-text mt-md-5 mb-2">Visit Sites in <%= place.name %></h1>
     <% } %>
 
-    <div
-      class="show-sites offset-1 gap-4 row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 mb-5"
-    >
+    <div class="show-sites offset-md-1 gap-4 row row-cols-lg-4 mb-5">
       <% for(let site of place.sites){ %>
-      <div class="site-card col">
+      <div class="site-card col-4 m-2">
         <img
           class="site-img"
           src="<%= site.siteurl %>"
@@ -65,14 +63,12 @@
     <!-- Adventures -->
 
     <% if(place.adventures.length > 0){ %>
-    <h1 class="home-text mt-5">Adventures in <%= place.name %></h1>
+    <h1 class="home-text mb-2">Adventures in <%= place.name %></h1>
     <% } %>
 
-    <div
-      class="show-sites offset-1 gap-4 row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 mb-5"
-    >
+    <div class="show-sites offset-md-1 gap-4 row row-cols-lg-4 mb-5">
       <% for(let adv of place.adventures){ %>
-      <div class="site-card col">
+      <div class="site-card col-4">
         <img
           class="site-img"
           id="imgg"

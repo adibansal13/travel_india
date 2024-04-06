@@ -71,6 +71,9 @@ a {
 
   color: rgb(0, 0, 0);
 }
+.card-image {
+  width: 50%;
+}
 .card-img {
   transition: 0.4s;
   object-fit: cover !important;
@@ -92,13 +95,9 @@ a {
 .show-card {
   display: flex;
   margin-top: 4rem;
+  width: 80%;
 }
 
-.show-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .cont {
   background-color: black;
   width: 100%;
@@ -149,4 +148,30 @@ a {
 .site-img:hover {
   transform: scale(1.03);
   box-shadow: 0 0px 10px rgb(71, 71, 71);
+}
+
+@media screen and (max-width: 430px) {
+  #mainimg {
+    height: 15rem;
+  }
+  .home-text {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .show-card {
+    display: block;
+    width: 100%;
+  }
+  .card-image {
+    width: 100%;
+  }
+  .formcss {
+    width: 80%;
+    position: fixed;
+    top: 30%;
+    left: 10%;
+  }
+  .site-card {
+    width: 40%;
+  }
 }

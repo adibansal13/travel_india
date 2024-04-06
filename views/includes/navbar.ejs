@@ -20,12 +20,14 @@
         <a class="nav-link navlink" href="/places/new">Add New Place</a>
         <% } %> <% } %>
       </div>
+      <div>
+        <% if(!currUser){ %>
+        <a href="/signin" class="btn btn-outline-light ms-2"> Sign In </a>
+        <a href="/login" class="btn btn-light ms-2 text-primary"> Login In </a>
+        <% } %> <% if(currUser){ %>
+        <a href="/logout" class="btn btn-light mb-1">Log Out</a>
+        <% } %>
+      </div>
     </div>
-    <% if(!currUser){ %>
-    <a href="/signin" class="btn btn-outline-light ms-2"> Sign In </a>
-    <a href="/login" class="btn btn-light ms-2 text-primary"> Login In </a>
-    <% } %> <% if(currUser){ %>
-    <a href="/logout" class="btn btn-light ms-2">Log Out</a>
-    <% } %>
   </div>
 </nav>
