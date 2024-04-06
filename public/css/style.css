@@ -3,7 +3,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding-top: 5rem;
-  background-color: rgb(227, 239, 249);
+  background-color: rgb(222, 237, 249);
 }
 a {
   text-decoration: none;
